@@ -1,27 +1,25 @@
-
-
 bool is_safe(int row, int col, vector<vector<int>>&board, int n){
-    int x=row;
-    int y=col;
-    while(y >= 0){
-        if(board[x][y]==1) return false;
-        y--;
+    int i=row;
+    int j=col;
+    while(j >= 0){
+        if(board[i][j]==1) return false;
+        j--;
     }
     
-    x=row;
-    y=col;
-    while(x>= 0 && y>=0){
-        if(board[x][y]==1) return false;
-        x--;
-        y--;
+    i=row;
+    j=col;
+    while(i>= 0 && j>=0){
+        if(board[i][j]==1) return false;
+        i--;
+        j--;
     }
     
-    x=row;
-    y=col;
-    while(x<n && y>=0){
-        if(board[x][y]==1) return false;
-        x++;
-        y--;
+    i=row;
+    j=col;
+    while(i<n && j>=0){
+        if(board[i][j]==1) return false;
+        i++;
+        j--;
     }
 }
 

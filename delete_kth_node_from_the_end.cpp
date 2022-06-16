@@ -42,8 +42,3 @@ LinkedListNode<int>* removeKthNode(LinkedListNode<int> *head, int K){
     }
     return head;
 }
-
-
-
-
-

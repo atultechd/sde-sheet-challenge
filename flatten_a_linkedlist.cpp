@@ -35,11 +35,13 @@ Node* merge_list(Node* list1, Node* list2){
         }
     }
 
+    // remaining nodes of list1 and list2
+    // are to be merged at last of temp node.
     if(list1) temp->child = list1;
     else temp->child = list2;
 
     res->child->next = NULL;
-    
+
     return res->child;
 }
 

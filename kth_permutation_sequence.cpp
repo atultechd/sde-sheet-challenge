@@ -19,3 +19,5 @@ string kthPermutation(int n, int k) {
     }
     return ans;
 }
+
+// TC: O(n*n), SC: O(n)

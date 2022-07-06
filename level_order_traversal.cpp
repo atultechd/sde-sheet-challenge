@@ -1,3 +1,4 @@
+
 #include<bits/stdc++.h>
 /************************************************************
 
@@ -31,10 +32,11 @@ vector<int> getLevelOrder(BinaryTreeNode<int> *root){
     while(!q.empty()){
 
         BinaryTreeNode<int> *temp = q.front();
+
         q.pop();
 
         res.push_back(temp->val);
-        
+
         if(temp->left != NULL) q.push(temp->left);
 
         if(temp->right != NULL) q.push(temp->right);

@@ -28,6 +28,7 @@ TreeNode<int> *flattenBinaryTree(TreeNode<int> *root){
             }
             pred->right = curr->right;
             curr->right = curr->left;
+            curr->left = NULL;
         }
         curr = curr->right;
     }

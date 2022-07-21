@@ -13,18 +13,11 @@ vector<pair<pair<int, int>, int>> calculatePrimsMST(int n, int m, vector<pair<pa
         adj[v].push_back(make_pair(u,w));
     }
 
-    vector<int> key(n+1);
-    vector<bool> mst(n+1);
-    vector<int> parent(n+1);
+    vector<int> key(n+1,INT_MAX);
+
+    vector<bool> mst(n+1,false);
     
-    for(int i=0; i<=n; i++){
-
-        key[i] = INT_MAX;
-
-        parent[i] = -1;
-
-        mst[i] = false;
-    }
+    vector<int> parent(n+1,-1);
 
     key[1] = 0;
 

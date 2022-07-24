@@ -83,3 +83,38 @@ bool subsetSumToK(int n, int k, vector<int> &arr) {
 
     return dp[n-1][k];
 }
+
+
+// ..........................................................................
+
+// Most optimised(instead of 2d vector we just use 2 1d vector).
+
+bool subsetSumToK(int n, int k, vector<int> &arr) {
+
+    vector<bool> prev(k+1,0), cur(k+1,0);
+
+    prev[0] = cur[0] = true; 
+
+    prev[arr[0]] = true;
+
+    for(int ind = 1; ind < n; ind++){
+
+        for(int target = 1; target <= k; target++){
+
+            bool not_take = prev[target];
+
+            bool take = false;
+
+            if(target >= arr[ind]){
+
+                take = prev[target-arr[ind]];
+            }
+
+            cur[target] = take || not_take;
+        }
+
+        prev = cur;
+    }
+    
+    return prev[k];
+}

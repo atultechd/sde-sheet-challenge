@@ -9,13 +9,13 @@ int solve_for_cutlogs(int number_of_axes, int stand_capacity, vector<vector<int>
 
     int ans = INT_MAX;
 
-    int l=1;
+    int low = 1;
 
-    int h=stand_capacity;
+    int high = stand_capacity;
 
-    while(l<=h){
+    while(low <= high){
 
-        int mid = (l+(h-l)/ 2);
+        int mid = (low+(high-low)/ 2);
 
         int axe_break = solve_for_cutlogs(number_of_axes-1, mid-1,dp);
 
@@ -23,9 +23,9 @@ int solve_for_cutlogs(int number_of_axes, int stand_capacity, vector<vector<int>
 
         int temp = 1 + max(axe_break, not_break);
 
-        if(axe_break < not_break) l = mid+1;
+        if(axe_break < not_break) low = mid+1;
 
-        else h = mid-1;
+        else high = mid-1;
 
         ans = min(ans,temp);
     }

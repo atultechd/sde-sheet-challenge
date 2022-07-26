@@ -15,7 +15,8 @@ int maximumXor(vector<int> a){
     return maxi;
 }
 
-// ..........................................................
+
+// .................................................................
 
 
 // Optimised approach using trie
@@ -110,6 +111,6 @@ int maximumXor(vector<int> a){
 
         maxi = max(maxi, trie.getmax(a[i]));
     } 
-       
+
     return maxi;
 }

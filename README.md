@@ -1,6 +1,6 @@
 # sde-sheet-challenge
 
-👉This sheet contains all questions given in the <a href="https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/" target="_blank" ></a>
+👉This sheet contains all questions given in the <a href="https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/" target="_blank" >Striver SDE Sheet</a>
 
 👉It takes me 52 days straight to complete this sheet.
 
